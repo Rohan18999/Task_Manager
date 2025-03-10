@@ -1,4 +1,5 @@
 body{
+    display: flex;
     font-family: Arial, sans-serif;
     background: #f4f4f4;
     margin: 0;
@@ -8,9 +9,7 @@ body{
     align-items: center;
     min-height: 100vh;
 }
-heading{
-    margin-right: 20px;
-}
+
 main{
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
     padding: 20px;
@@ -21,13 +20,18 @@ main{
 .taskForm{
     display: flex;
     padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    width:100%;
 }
 #task-form{
     display: flex;
+    width:95%;
     gap:0;
 }
 #typeText{
-    padding: 5px 300px 5px 5px;
+    flex:1;
+    padding: 10px;
     font-weight: 500;
     border: solid;
     border-width: 2px;
@@ -49,6 +53,7 @@ main{
     display: flex;
     gap: 15px;
     justify-content: center;
+    margin-bottom: 15px;
 }
 .filter-button{
     padding: 10px;
@@ -60,6 +65,7 @@ main{
     font-weight: 500;
     cursor: pointer;
 }
+.filter-button.active,
 .filter-button:hover{
     padding: 10px;
     padding-left: 15px;
@@ -70,4 +76,33 @@ main{
     color: white;
     font-weight: 500;
     cursor: pointer;
+}
+.div-task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid rgba(245, 245, 245, 0.744);
+    border-radius: 10px;
+    width: 95%;
+    background-color: rgba(245, 245, 245, 0.744);
+    margin-bottom: 10px;
+}
+.p-task{
+    display: flex;
+    margin-right: 10px;
+    font-weight: 500;
+    text-align: left; 
+}
+.task-deleteBtn{
+    background-color: rgb(203, 7, 7);
+    color:white;
+    border:2px solid rgb(209, 5, 5);
+    border-radius: 3px;
+}
+#task-list{
+    margin:0;
+    padding:0;
+    list-style: none;
 }
